@@ -22,3 +22,5 @@ public:
         return st.top();
     }
 };
+// tc = o(n*2)
+//sc = o(n*2)
