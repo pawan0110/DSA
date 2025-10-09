@@ -38,14 +38,12 @@ int characterReplacement(string s, int k)
         freq[s[j] - 'A']++;
         maxCount = max(maxCount, freq[s[j] - 'A']);
 
-        int window = j - i + 1;
-        while (window - maxCount > k)
+        while ((j - i + 1) - maxCount > k)
         {
-           freq[s[i]-'A']--;
-           i++;
+            freq[s[i] - 'A']--;
+            i++;
         }
-        maxLen = max(maxLen, j-i+1);
-        
+        maxLen = max(maxLen, j - i + 1);
     }
 
     return maxLen;
