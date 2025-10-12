@@ -26,3 +26,38 @@ public:
 };
 // tc = o(n)
 // sc= o(1)
+
+
+class Solution {
+public:
+    int subarraysWithKDistinct(vector<int>& nums, int k) {
+       return atmost(nums,k) - atmost(nums, k-1);
+    }
+    int atmost(vector<int>& nums, int k){
+        int n= nums.size();
+        int goodArray =0;
+        int left = 0;
+        int dist = 0;
+        unordered_map<int,int> freq;;
+
+        for(int right=0; right<n; right++){
+           if(freq[nums[right]] == 0) {
+            dist++;
+           }
+           freq[nums[right]]++;
+
+            while(dist>k){
+                freq[nums[left]]--;
+                if(freq[nums[left]] == 0) {
+                     dist--;
+                }
+                left++;
+            }
+            goodArray += (right-left+1);
+
+        }
+        return goodArray;
+    }
+};
+// tc = o(n)
+// sc= o(1)
