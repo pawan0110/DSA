@@ -7,7 +7,7 @@ public:
         // User code goes here
         int m = s1.size(), n =s2.size();
         int minLen = INT_MAX;
-        STRING RES  = "";
+        string res  = "";
         int i = 0;
 
         while(i<m) {
