@@ -34,7 +34,7 @@ public:
         heap.push_back(key);
         int i = heap.size() - 1;
 
-        // Fix the min-heap property
+      
         while (i != 0 && heap[parent(i)] > heap[i]) {
             swap(heap[i], heap[parent(i)]);
             i = parent(i);
@@ -46,12 +46,12 @@ public:
             return;
 
         heap[index] = new_val;
-        // If decreased, bubble up
+       
         while (index != 0 && heap[parent(index)] > heap[index]) {
             swap(heap[index], heap[parent(index)]);
             index = parent(index);
         }
-        // If increased, fix down
+       
         heapify(index);
     }
 
