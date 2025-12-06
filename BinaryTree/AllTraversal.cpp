@@ -11,6 +11,13 @@ using namespace std;
 // Explanation : The In-order traversal is [5, 3, 2, 1, 7, 4, 6].
 // The Pre-order traversal is [1, 3, 5, 2, 4, 7, 6].
 // The Post-order traversal is [5, 2, 3, 7, 6, 4, 1].
+struct TreeNode {
+    int val;
+     TreeNode *left;
+     TreeNode *right;
+     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}   TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
 
 class Solution
 {
