@@ -26,15 +26,14 @@ public:
             int col = p.second.first;
             int row = p.second.second;
 
-            // insert value into map
+            
             nodes[col][row].insert(temp->val);
 
-            // left child
+       
             if (temp->left) {
                 q.push({temp->left, {col - 1, row + 1}});
             }
 
-            // right child
             if (temp->right) {
                 q.push({temp->right, {col + 1, row + 1}});
             }
@@ -42,11 +41,10 @@ public:
 
         vector<vector<int>> result;
 
-        // read map (col by col)
         for (auto &colPair : nodes) {
             vector<int> colValues;
 
-            // read rows inside each col (sorted automatically)
+          
             for (auto &rowPair : colPair.second) {
                 colValues.insert(colValues.end(),
                                  rowPair.second.begin(),
