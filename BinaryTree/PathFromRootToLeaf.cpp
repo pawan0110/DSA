@@ -29,3 +29,5 @@ class Solution{
             return ans;
 		}
 };
+//tc=0(n)
+//sc=0(height)
