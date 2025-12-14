@@ -26,6 +26,7 @@
 // 6 = 2 + 4
 // 10 = 4 + 6
 // All internal nodes satisfy the condition.
+
 #include <bits/stdc++.h>
 using namespace std;
 
