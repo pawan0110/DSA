@@ -77,3 +77,23 @@ public:
 };
 // tc = 0(n)
 // sc = 0(n)
+
+
+
+//.....................................recursive method
+// class Solution {
+// public:
+//     bool checkChildrenSum(TreeNode* root) {
+//         // Your code goes here
+//         if(!root || (!root->left && !root->right))
+//          return true;
+
+//         int leftVal = root->left ? root->left->val : 0;
+//         int rightval = root->right ? root->right->val : 0;
+
+//         return (root->val == (leftVal+rightVal)) && checkChildrenSum(root->left) && checkChildrenSum(root->right);
+//     }
+// };
+
+//tc = 0(n)
+// sc = 0(hieght)
