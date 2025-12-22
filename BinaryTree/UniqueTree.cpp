@@ -60,3 +60,5 @@ public:
         return buildTreeHelper(preorder,inorder,0,inorder.size()-1);
     }
 };
+//tc = o(n)
+//sc=o(n)
